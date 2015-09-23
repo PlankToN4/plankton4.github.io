@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript" language="javascript" src="jquery-1.11.3.min.js"></script>
-		<script>
-
+<head>
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<!--Script for get names from JSON and put them in the table-->
+	<script>
     $(function() {
+		var people = [];
 
-
-   var people = [];
-
-   $.getJSON('M15.json', function(data) {
+	$.getJSON('M15.json', function(data) {
        $.each(data.cards, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "</tr>"
+		   var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
-     });
+	   });
 
-   });
+	});
 
-});
-</script>
-		<title>YOBA</title>
-		</head>
-	<body>
-		<div class="wrapper">
-<div class="profile">
-   <table id= "userdata" border="2">
-  <thead>
-            <th>Name</th>
-        </thead>
-      <tbody>
+	});
+	</script>
+<!--End of script-->
+	<title>YOBA</title>
+</head>
+<body>
+	<div class="wrapper">
+	<div class="profile">
+		<table id= "userdata" border="2">
+  			<thead>
+            	<th>Name</th>
+        	</thead>
 
-       </tbody>
-   </table>
+      		<tbody>
 
-</div>
-</div>
-
-	</body>
+       		</tbody>
+		</table>
+	</div>
+	</div>
+</body>
 </html>

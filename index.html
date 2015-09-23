@@ -9,10 +9,9 @@
 
    var people = [];
 
-   $.getJSON('people.json', function(data) {
+   $.getJSON('ORI.json', function(data) {
        $.each(data.person, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+          var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
      });
 
@@ -27,7 +26,7 @@
 <div class="profile">
    <table id= "userdata" border="2">
   <thead>
-            <th>First Name</th>
+            <th>Name</th>
             <th>Last Name</th>
             <th>Email Address</th>
             <th>City</th>

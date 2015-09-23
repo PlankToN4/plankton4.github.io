@@ -10,7 +10,7 @@
    var people = [];
 
    $.getJSON('ORI.json', function(data) {
-       $.each(data.person, function(i, f) {
+       $.each(data.cards, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
      });
